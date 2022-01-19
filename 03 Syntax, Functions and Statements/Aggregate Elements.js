@@ -1,12 +1,13 @@
-function sum(a){
-    let array;
+function aggregate(array){
     let sum = 0;
+    let sumInverse = 0;
+    let concat = "";
 
-    for(let i = 0; i < array.count; i++){
-        sum += array[i];
-    }
+    sum = array.reduce((partSum, a) => partSum + a, 0);
+    sumInverse = array.reduce((partSum, a) => partSum + 1/a, 0);
+    concat = array.join("");
 
-    return sum;
+    console.log(sum);
+    console.log(sumInverse);
+    console.log(concat);
 }
-
-console.log(sum([1, 2, 3]));
