@@ -4,5 +4,6 @@ function wordsUpperCase(string){
     let strArray = [...string.matchAll(regex)];
     console.log(strArray.join(", "));
 }
+
 wordsUpperCase('Hi, how are you?');
 wordsUpperCase('hello');
