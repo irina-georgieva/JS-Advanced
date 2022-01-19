@@ -1,12 +1,12 @@
-function number(a, b){
+function number(a, b) {
 
     let firstNumber = Number(a);
     let secondNumber = Number(b);
 
-    while(firstNumber !== secondNumber){
-        if(firstNumber > secondNumber){
+    while (firstNumber !== secondNumber) {
+        if (firstNumber > secondNumber) {
             firstNumber -= secondNumber;
-        }else{
+        } else {
             secondNumber -= firstNumber;
         }
     }
