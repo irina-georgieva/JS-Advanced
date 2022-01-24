@@ -23,50 +23,35 @@ function ticTacToe(inputMove) {
         matrix[row][col] = playerX ? 'X' : 'O';
         emptySpaces--;
 
-        //for (let i = 0; i < 3; i++) {
-            //for (let j = 0; j < 3; j++) {
-                if ((typeof(matrix[0][0]) !== 'boolean' && (matrix[0][0] == matrix[0][1]) && (matrix[0][1] == matrix[0][2])) ||
-                (typeof(matrix[1][0]) !== 'boolean' && (matrix[1][0] == matrix[1][1]) && (matrix[1][1] == matrix[1][2])) ||
-                (typeof(matrix[2][0]) !== 'boolean' && (matrix[2][0] == matrix[2][1]) && (matrix[2][1] == matrix[2][2])) ||
+        if ((typeof (matrix[0][0]) !== 'boolean' && (matrix[0][0] == matrix[0][1]) && (matrix[0][1] == matrix[0][2])) ||
+            (typeof (matrix[1][0]) !== 'boolean' && (matrix[1][0] == matrix[1][1]) && (matrix[1][1] == matrix[1][2])) ||
+            (typeof (matrix[2][0]) !== 'boolean' && (matrix[2][0] == matrix[2][1]) && (matrix[2][1] == matrix[2][2])) ||
 
-                (typeof(matrix[0][0]) !== 'boolean' && (matrix[0][0] == matrix[1][0]) && (matrix[1][0] == matrix[2][0])) ||
-                (typeof(matrix[0][1]) !== 'boolean' && (matrix[0][1] == matrix[1][1]) && (matrix[1][1] == matrix[2][1])) ||
-                (typeof(matrix[0][2]) !== 'boolean' && (matrix[0][2] == matrix[1][2]) && (matrix[1][2] == matrix[2][2])) ||
+            (typeof (matrix[0][0]) !== 'boolean' && (matrix[0][0] == matrix[1][0]) && (matrix[1][0] == matrix[2][0])) ||
+            (typeof (matrix[0][1]) !== 'boolean' && (matrix[0][1] == matrix[1][1]) && (matrix[1][1] == matrix[2][1])) ||
+            (typeof (matrix[0][2]) !== 'boolean' && (matrix[0][2] == matrix[1][2]) && (matrix[1][2] == matrix[2][2])) ||
 
-                (typeof(matrix[0][0]) !== 'boolean' && (matrix[0][0] == matrix[1][1]) && (matrix[1][1] == matrix[2][2])) ||
-                (typeof(matrix[2][0]) !== 'boolean' && (matrix[2][0] == matrix[1][1]) && (matrix[1][1] == matrix[0][2]))){
-                
-                //typeof (matrix[i][j]) !== 'boolean' && matrix[i][j] === matrix[i][j + 1] && matrix[i][j] === matrix[i][j + 2] ||
-                    //typeof (matrix[i][j]) !== 'boolean' && matrix[i][j] === matrix[i + 1][j] && matrix[i][j] === matrix[i + 2][j] ||
-                    //typeof (matrix[i][j]) !== 'boolean' && matrix[i][j] === matrix[i + 1][j + 1] && matrix[i][j] === matrix[i + 2][j + 2]) {
+            (typeof (matrix[0][0]) !== 'boolean' && (matrix[0][0] == matrix[1][1]) && (matrix[1][1] == matrix[2][2])) ||
+            (typeof (matrix[2][0]) !== 'boolean' && (matrix[2][0] == matrix[1][1]) && (matrix[1][1] == matrix[0][2]))) {
 
-                    isWin = true;
-                    break;
-                }
-            
-                if(emptySpaces == 0){
-                    break;
-                }
-            //}
+            isWin = true;
+            break;
+        }
 
-            //if(isWin){
-            //    break;
-            //}
-        //} 
-        //if(isWin){
-        //    break;
-       // }     
-       playerX = !playerX;
+        if (emptySpaces == 0) {
+            break;
+        }
+
+        playerX = !playerX;
     }
 
     if (isWin) {
         console.log(`Player ${playerX ? 'X' : 'O'} wins!`);
-    }
-    else {
+    }else {
         console.log('The game ended! Nobody wins :(');
     }
 
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         console.log(matrix[i].join('\t'));
     }
 }
@@ -83,16 +68,16 @@ ticTacToe(["0 1",
     "2 1",
     "0 0"]);
 
-    ticTacToe(["0 0",
-"0 0",
-"1 1",
-"0 1",
-"1 2",
-"0 2",
-"2 2",
-"1 2",
-"2 2",
-"2 1"]);
+ticTacToe(["0 0",
+    "0 0",
+    "1 1",
+    "0 1",
+    "1 2",
+    "0 2",
+    "2 2",
+    "1 2",
+    "2 2",
+    "2 1"]);
 
 
 ticTacToe(["0 1",
