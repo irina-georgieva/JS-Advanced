@@ -48,7 +48,8 @@ describe('Summator', () => {
 
     it('works with numbers as strings', () => {
         instance.add('1');
-        instance.subtract('2');
+        instance.add('2');
+        instance.subtract('4');
         expect(instance.get()).to.equal(-1);
     });
 });
